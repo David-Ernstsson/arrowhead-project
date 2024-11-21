@@ -1,0 +1,13 @@
+ai\aitia\demo\car_provider\CarProviderMain.class
+ai\aitia\demo\car_provider\entity\Car.class
+ai\aitia\demo\car_provider\controller\CarServiceController.class
+eu\arrowhead\application\skeleton\provider\configuration\ContainerConfiguration.class
+eu\arrowhead\application\skeleton\provider\security\ProviderTokenSecurityFilter.class
+ai\aitia\demo\car_provider\CarProviderConstants.class
+ai\aitia\demo\car_provider\database\DTOConverter.class
+eu\arrowhead\application\skeleton\provider\configuration\ContainerConfProperties.class
+eu\arrowhead\application\skeleton\provider\security\ProviderAccessControlFilter.class
+eu\arrowhead\application\skeleton\provider\ProviderApplicationInitListener.class
+eu\arrowhead\application\skeleton\provider\security\ProviderSecurityConfig.class
+ai\aitia\demo\car_provider\database\InMemoryCarDB.class
+eu\arrowhead\application\skeleton\provider\configuration\ConfigConstants.class
