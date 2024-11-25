@@ -18,6 +18,8 @@
         <module>demo-car-provider</module>
         <module>application-skeleton-provider</module>
         <module>application-skeleton-publisher</module>
+        <module>application-skeleton-consumer</module>
+        <module>application-skeleton-subscriber</module>
     </modules>
     <build>
         <plugins>

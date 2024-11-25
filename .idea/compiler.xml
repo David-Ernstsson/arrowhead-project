@@ -6,17 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="application-skeleton-provider" />
         <module name="demo-car-common" />
-        <module name="demo-car-consumer" />
         <module name="demo-car-provider" />
+        <module name="application-skeleton-provider" />
+        <module name="application-skeleton-consumer" />
+        <module name="demo-car-consumer" />
         <module name="arrowhead-application-skeleton-publisher" />
+        <module name="application-skeleton-subscriber" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="application-skeleton-consumer" options="-parameters" />
       <module name="application-skeleton-provider" options="-parameters" />
+      <module name="application-skeleton-subscriber" options="-parameters" />
       <module name="arrowhead-application-skeleton-provider" options="-parameters" />
       <module name="arrowhead-application-skeleton-publisher" options="-parameters" />
       <module name="demo-car" options="-parameters" />
