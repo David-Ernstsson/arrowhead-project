@@ -17,6 +17,7 @@
         <module>demo-car-consumer</module>
         <module>demo-car-provider</module>
         <module>application-skeleton-provider</module>
+        <module>application-skeleton-publisher</module>
     </modules>
     <build>
         <plugins>

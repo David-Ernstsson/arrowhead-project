@@ -10,11 +10,11 @@ import eu.arrowhead.common.CommonConstants;
 @ComponentScan(basePackages = {CommonConstants.BASE_PACKAGE, "ai.aitia"}) //TODO: add custom packages if any
 public class ProviderMain {
 
-	//=================================================================================================
-	// methods
+    //=================================================================================================
+    // methods
 
-	//-------------------------------------------------------------------------------------------------
-	public static void main(final String[] args) {
-		SpringApplication.run(ProviderMain.class, args);
-	}	
+    //-------------------------------------------------------------------------------------------------
+    public static void main(final String[] args) {
+        SpringApplication.run(ProviderMain.class, args);
+    }
 }

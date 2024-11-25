@@ -10,6 +10,7 @@
         <module name="demo-car-common" />
         <module name="demo-car-consumer" />
         <module name="demo-car-provider" />
+        <module name="arrowhead-application-skeleton-publisher" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,6 +18,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="application-skeleton-provider" options="-parameters" />
       <module name="arrowhead-application-skeleton-provider" options="-parameters" />
+      <module name="arrowhead-application-skeleton-publisher" options="-parameters" />
       <module name="demo-car" options="-parameters" />
       <module name="demo-car-common" options="-parameters" />
       <module name="demo-car-consumer" options="-parameters" />
