@@ -9,7 +9,6 @@ import java.security.PublicKey;
 import java.security.cert.CertificateException;
 import java.time.ZonedDateTime;
 import java.util.Base64;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -20,7 +19,6 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.event.ContextRefreshedEvent;
-import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
 
 import ai.aitia.arrowhead.application.library.ArrowheadService;
@@ -89,10 +87,10 @@ public class PublisherApplicationInitListener extends ApplicationInitListener {
 		}
 
 		//TODO: Register system by first registering service and then unregister into ServiceRegistry. One seems to first having to needs to create a system to be able to publish event, but how else to do this using arrowheadService?
-		String dummy = "dummy";
-		final ServiceRegistryRequestDTO serviceRegistryRequest = createServiceRegistryRequest(dummy, dummy, HttpMethod.POST);
+		//TODO: Dummy service is needed for system to be created. Its also needed for the consumer to get (some kind of service-registry permission dependency for events magic check?) to get events
+		final ServiceRegistryRequestDTO serviceRegistryRequest = createDummyServiceRegistryRequest();
 		arrowheadService.forceRegisterServiceToServiceRegistry(serviceRegistryRequest);
-		arrowheadService.unregisterServiceFromServiceRegistry(dummy, dummy);
+		//arrowheadService.unregisterServiceFromServiceRegistry(dummy, dummy);
 
 		if (arrowheadService.echoCoreSystem(CoreSystem.EVENTHANDLER)) {
 			arrowheadService.updateCoreServiceURIs(CoreSystem.EVENTHANDLER);	
@@ -103,9 +101,9 @@ public class PublisherApplicationInitListener extends ApplicationInitListener {
 		//TODO: implement here any custom behavior on application start up
 	}
 
-	private ServiceRegistryRequestDTO createServiceRegistryRequest(final String serviceDefinition, final String serviceUri, final HttpMethod httpMethod) {
+	private ServiceRegistryRequestDTO createDummyServiceRegistryRequest() {
 		final ServiceRegistryRequestDTO serviceRegistryRequest = new ServiceRegistryRequestDTO();
-		serviceRegistryRequest.setServiceDefinition(serviceDefinition);
+		serviceRegistryRequest.setServiceDefinition("dummy");
 		final SystemRequestDTO systemRequest = new SystemRequestDTO();
 		systemRequest.setSystemName(mySystemName);
 		systemRequest.setAddress(mySystemAddress);
@@ -124,9 +122,7 @@ public class PublisherApplicationInitListener extends ApplicationInitListener {
 			serviceRegistryRequest.setInterfaces(List.of(PublishingConstants.INTERFACE_INSECURE));
 		}
 		serviceRegistryRequest.setProviderSystem(systemRequest);
-		serviceRegistryRequest.setServiceUri(serviceUri);
-		serviceRegistryRequest.setMetadata(new HashMap<>());
-		serviceRegistryRequest.getMetadata().put(PublishingConstants.HTTP_METHOD, httpMethod.name());
+		serviceRegistryRequest.setServiceUri("/dummy");
 		return serviceRegistryRequest;
 	}
 

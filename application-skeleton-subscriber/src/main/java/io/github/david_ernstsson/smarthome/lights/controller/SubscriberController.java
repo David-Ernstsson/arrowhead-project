@@ -32,15 +32,14 @@ public class SubscriberController {
 	}
 	
 	//-------------------------------------------------------------------------------------------------
-	@PostMapping(path = SubscriberConstants.REQUEST_RECEIVED_NOTIFICATION_URI) 
-	public void receivePublisherReceivedRequestEvent(@RequestBody final EventDTO event ) {	
-		logger.debug("receivePublisherReceivedRequestEvent started...");
-		
-		if (event.getEventType() == null) {			
-			logger.debug("EventType is null.");
+	@PostMapping(path = SubscriberConstants.HOMEOWNER_LEFT_NOTIFICATION_URI)
+	public void receiveEventHomeownerLeft(@RequestBody final EventDTO event) {
+		logger.debug("receiveEventRequestHomeOwner started...");
+
+		if (event.getEventType() != null) {
+			//TODO: Turn off lights
+			logger.info("Turning off lights");
 		}
-		
-		//TODO implement your event handling logic here 
 	}
 	
 	//-------------------------------------------------------------------------------------------------

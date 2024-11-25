@@ -16,11 +16,11 @@ public class ScheduledTask {
     private PublisherService publisherService;
 
 
-    @Scheduled(fixedRate = 10000) // Executes every 10 seconds (10000 ms)
+    @Scheduled(fixedRate = 3000) // Executes every 10 seconds (10000 ms)
     public void runEvery10Seconds() {
         System.out.println("This runs every 10 seconds: " + System.currentTimeMillis());
 
-        publisherService.publish(PresetEventType.DOMAIN_EVENT, Map.of(EventTypeConstants.EVENT_TYPE_DOMAIN_EVENT, HttpMethod.GET.name()), "HOMEOWNER_LEFT");
+        publisherService.publish(PresetEventType.HOMEOWNER_LEFT, null, "yes he/she did");
 
         // Add your custom logic here
     }
