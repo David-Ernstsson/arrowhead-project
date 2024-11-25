@@ -14,7 +14,8 @@ public enum PresetEventType {
 	
 	START_INIT(EventTypeConstants.EVENT_TYPE_START_INIT, List.of()),
 	START_RUN(EventTypeConstants.EVENT_TYPE_START_RUN, List.of()),
-	REQUEST_RECEIVED( EventTypeConstants.EVENT_TYPE_REQUEST_RECEIVED, List.of());
+	REQUEST_RECEIVED( EventTypeConstants.EVENT_TYPE_REQUEST_RECEIVED, List.of()),
+	DOMAIN_EVENT( EventTypeConstants.EVENT_TYPE_DOMAIN_EVENT, List.of());
 
 	//=================================================================================================
 	// members

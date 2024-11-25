@@ -8,7 +8,7 @@ import eu.arrowhead.common.CommonConstants;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {CommonConstants.BASE_PACKAGE, "ai.aitia"}) //TODO: add custom packages if any
+@ComponentScan(basePackages = {CommonConstants.BASE_PACKAGE, "ai.aitia", "io.github.david_ernstsson.smarthome.doorcamera"})
 @EnableScheduling
 public class PublisherMain {
 
