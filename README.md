@@ -1,6 +1,6 @@
 # Smart energy-efficient home
 
-## To start
+## Running the SoS
 1. Start local cloud with core systems as well as eventhandler at ip `169.254.5.254`
 2. Start publishing systems: `door-camera`
 3. Register and run consuming system `lights` (replace id values accordingly from database/swagger)
