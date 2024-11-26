@@ -10,6 +10,7 @@
         <module name="application-skeleton-provider" />
         <module name="application-skeleton-consumer" />
         <module name="arrowhead-application-skeleton-publisher" />
+        <module name="lights" />
         <module name="application-skeleton-subscriber" />
       </profile>
     </annotationProcessing>
@@ -30,6 +31,7 @@
       <module name="demo-car-consumer" options="-parameters" />
       <module name="demo-car-provider" options="-parameters" />
       <module name="door-camera" options="-parameters" />
+      <module name="lights" options="-parameters" />
       <module name="smarthome" options="-parameters" />
     </option>
   </component>

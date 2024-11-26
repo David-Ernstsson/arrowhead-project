@@ -1,16 +1,10 @@
-package io.github.david_ernstsson.smarthome.lights.controller;
-
-import java.util.Base64;
-import java.util.Map;
+package io.github.david_ernstsson.smarthome.lights;
 
 import eu.arrowhead.application.skeleton.subscriber.ConfigEventProperites;
-import eu.arrowhead.application.skeleton.subscriber.SubscriberUtilities;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -20,13 +14,11 @@ import ai.aitia.arrowhead.application.library.ArrowheadService;
 import ai.aitia.arrowhead.application.library.util.ApplicationCommonConstants;
 import eu.arrowhead.application.skeleton.subscriber.constants.SubscriberConstants;
 import eu.arrowhead.common.CommonConstants;
-import eu.arrowhead.common.dto.shared.SystemRequestDTO;
-import eu.arrowhead.common.exception.InvalidParameterException;
 
 @SpringBootApplication
 @EnableConfigurationProperties(ConfigEventProperites.class)
 @ComponentScan(basePackages = {CommonConstants.BASE_PACKAGE, "ai.aitia", "io.github.david_ernstsson.smarthome.lights"}) //TODO: add custom packages if any
-public class SubscriberMain {
+public class LightsMain {
 
     //=================================================================================================
 	// members
@@ -52,14 +44,14 @@ public class SubscriberMain {
 	@Autowired
 	private ConfigEventProperites configEventProperites;
 	
-	private final Logger logger = LogManager.getLogger(SubscriberApplicationInitListener.class);
+	private final Logger logger = LogManager.getLogger(LightsApplicationInitListener.class);
 	
 	//=================================================================================================
 	// methods
 
 	//-------------------------------------------------------------------------------------------------
 	public static void main(final String[] args) {
-		SpringApplication.run(SubscriberMain.class, args);
+		SpringApplication.run(LightsMain.class, args);
 		
 	}
 }

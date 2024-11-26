@@ -1,4 +1,4 @@
-package io.github.david_ernstsson.smarthome.lights.controller;
+package io.github.david_ernstsson.smarthome.skeleton_subscriber;
 
 import java.io.IOException;
 import java.security.KeyStore;

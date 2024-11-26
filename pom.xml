@@ -15,6 +15,7 @@
 
     <modules>
         <module>door-camera</module>
+        <module>lights</module>
         <module>application-skeleton-provider</module>
         <module>application-skeleton-publisher</module>
         <module>application-skeleton-consumer</module>

@@ -15,13 +15,14 @@ import eu.arrowhead.common.dto.shared.EventDTO;
 
 @RestController
 @RequestMapping(SubscriberDefaults.DEFAULT_EVENT_NOTIFICATION_BASE_URI)
-public class SubscriberController {
+public class LightsController {
 	
 	//=================================================================================================
 	// members
 
-	private final Logger logger = LogManager.getLogger(SubscriberController.class);
-	
+	private final Logger logger = LogManager.getLogger(LightsController.class);
+	private static boolean lightsTurnedOn =false;
+
 	//=================================================================================================
 	// methods
 
@@ -37,21 +38,37 @@ public class SubscriberController {
 		logger.debug("receiveEventRequestHomeOwner started...");
 
 		if (event.getEventType() != null) {
-			//TODO: Turn off lights
-			logger.info("Turning off lights");
+			changeLightsState(false);
 		}
 	}
-	
+
+	@PostMapping(path = SubscriberConstants.HOMEOWNER_CAME_HOME_NOTIFICATION_URI)
+	public void receiveEventHomeownerCameHome(@RequestBody final EventDTO event) {
+		logger.debug("receiveEventRequestHomeOwner started...");
+
+		if (event.getEventType() != null) {
+			changeLightsState(true);
+		}
+	}
+
+	private void changeLightsState(boolean isTurnedOn) {
+		lightsTurnedOn = isTurnedOn;
+		if(isTurnedOn) {
+			logger.info("Lights turned on");
+		}
+		else {
+			logger.info("Lights turned off");
+		}
+	}
+
 	//-------------------------------------------------------------------------------------------------
 	@PostMapping(path = SubscriberConstants.START_INIT_NOTIFICATION_URI) 
 	public void receivePublisherStartedInitEvent(@RequestBody final EventDTO event) {
 		logger.debug("receivePublsisherStartedInitEvent started... ");
 		
-		if (event.getEventType() == null) {			
+		if (event.getEventType() == null) {
 			logger.debug("EventType is null.");
 		}
-		
-		//TODO implement your event handling logic here 
 	}
 	
 	//-------------------------------------------------------------------------------------------------

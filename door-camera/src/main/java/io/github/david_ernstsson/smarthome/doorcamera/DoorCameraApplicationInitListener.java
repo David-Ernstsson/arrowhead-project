@@ -103,7 +103,7 @@ public class DoorCameraApplicationInitListener extends ApplicationInitListener {
 
 	private ServiceRegistryRequestDTO createDummyServiceRegistryRequest() {
 		final ServiceRegistryRequestDTO serviceRegistryRequest = new ServiceRegistryRequestDTO();
-		serviceRegistryRequest.setServiceDefinition("dummy");
+		serviceRegistryRequest.setServiceDefinition("door-camera-dummy");
 		final SystemRequestDTO systemRequest = new SystemRequestDTO();
 		systemRequest.setSystemName(mySystemName);
 		systemRequest.setAddress(mySystemAddress);
