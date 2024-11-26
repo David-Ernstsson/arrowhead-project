@@ -16,7 +16,7 @@
     2. `[https://169.254.5.254:8445/swagger-ui.html#/Management](https://169.254.5.254:8445/swagger-ui.html#/Management/registerAuthorizationIntraCloudUsingPOST)`
    ```json
    {    
-      "consumerId": ["lights-system-id"],
+      "consumerId": "lights-system-id",
       "interfaceIds": [1],
       "providerIds": ["door-camera-id"],
       "serviceDefinitionIds": ["door-camera-dummy-id"]
@@ -35,7 +35,7 @@
     2. `[https://169.254.5.254:8445/swagger-ui.html#/Management](https://169.254.5.254:8445/swagger-ui.html#/Management/registerAuthorizationIntraCloudUsingPOST)`
    ```json
    {    
-      "consumerId": ["radiator-system-id"],
+      "consumerId": "radiator-system-id",
       "interfaceIds": [1],
       "providerIds": ["door-camera-id"],
       "serviceDefinitionIds": ["door-camera-dummy-id"]
