@@ -1,67 +1,30 @@
-# Car Demo (Java Spring-Boot)
-##### The project provides Arrowhead Application demo implementation developed from [application-skeleton project](https://github.com/arrowhead-f/client-skeleton-java-spring)
+# Smart energy-efficient home
 
-## Overview
-The goal of the project is to simply demonstrate how a consumer could orchestrate for a service and consume it afterward.
-##### The Local Cloud Architecture 
-🟦 `AH Service Registry`
-🟥 `AH Authorization` 
-🟩 `AH Orchestrator`
-![Alt text](https://github.com/arrowhead-f/sos-examples-spring/blob/master/demo-car/doc/overview.png)
+## Purpose & project description
+The purpose of this project is to demonstrate a smart energy-efficient home using the Arrowhead Framework in a local cloud. The system of systems (SoS) aims to both minimize energy usage and costs as well as making life more convenience for the homeowner. The PoC demonstrates this by automating home appliances and services based on predefined events such as when the owner leaves or enters the home. The SoS uses event-driven architecture to control heating, lighting and electric car charging based on the homeowner's presence and electricity prices.
 
-## Service Descriptions
-**create-car:**
+## System and Services overview
 
-Creates a new car instance.
-* ***input:*** CarRequestDTO.json
-```
-{
-   "brand":"string",
-   "color":"string"
-}
-```
-* ***output:*** CarResponseDTO.json
-```
-{
-   "id":"integer",
-   "brand":"string",
-   "color":"string"
-}
-```
+| **System**                  | **Service Type** | **Service Description**                                                                                              |
+|-----------------------------|------------------|----------------------------------------------------------------------------------------------------------------------|
+| **Door camera**             | Provider         | Publishes an event when the owner enters the home.                                                                   |
+|                             | Provider         | Publishes an event when the owner leaves the home.                                                                   |
+| **Radiator**                | Consumer         | Consumes the "owner enters" event to turn on heating.                                                                |
+|                             | Consumer         | Consumes the "owner leaves" event to turn down/off heating.                                                          |
+| **Lights**                  | Consumer         | Consumes the "owner enters" event to turn on lights.                                                                |
+|                             | Consumer         | Consumes the "owner leaves" event to turn off lights.                                                                 |
+| **Electricity price monitor**| Provider         | Publishes an event when electricity price is low. |
+| **Car battery charger**     | Consumer         | Consumes the "electricity price is low" event to charge the electric car until full.                                 |
 
-**get-car:**
+## Implementation notes
+- **Event-based architecture:** The system heavily relies on an event-based architecture and the Arrowhead Framework eventhandler to synchronize operations between devices and services.
+- **Energy optimization:** By reacting to low electricity prices, the system reduces energy costs while ensuring essential operations like heating and car charging are performed efficiently.
+- **Homeowner convenience:** By leveraging automation rather than manual work the homeowner knows he/she saves costs without having to think or do anything about it.
+- **Publish of events:** Occurs randomly or somewhat randomly with a timer.
 
-Returns a car list based on the given parameters.
-* ***input:*** Query parameters: 
-
-  `brand`={brand} [*not mandatory*]
-  
-  `color`={color} [*not mandatory*]
-
-* ***output:*** List of CarResponseDTO.json
-```
-[{
-   "id":"integer",
-   "brand":"string",
-   "color":"string"
-}]
-```
-
-## How to run?
-1. Clone this repo to your local machine.
-2. Go to the root directory and execute `mvn install` command, then wait until the build succeeds.
-3. Start the [Arrowhead Framework](https://github.com/eclipse-arrowhead/core-java-spring), before you would start the demo.
-   Required core systems:
-   * Service Registry
-   * Authorization
-   * Orchestration
-4. Start the provider (it will registrate automatically to the Service Registry Core System).
-5. At the very first time, register the consumer manually and create the intra cloud authorization rules.
-6. Start the Consumer.
-
-## Configuration
-  - Find the `application.properties` confirguration file under the `<project>/src/main/resources` folder before the build or under the `<project>/target` after the build.
-  - Default configuration is provided out of the box which works when the Arrowhead Local Cloud is running on your localhost and has the common [testclou2 certificates](https://github.com/eclipse-arrowhead/core-java-spring/tree/master/certificates/testcloud2). 
-
-## Video tutorial
-[link](https://www.youtube.com/watch?v=9BHemnv3mQA&t=5s)
+## Future enhancements
+- More energy consuming systems such as dishwasher, laundry machine etc.
+- Electricity price monitor to pull spot price data from remote source
+- More heating adjustments such as turning down heating and turning off lights when owner goes to bed.
+- More convenience such as turning on radiators when owner leaves work rather than when entering home.
+- Showing homeowner how much energy that has been saved automatically.
