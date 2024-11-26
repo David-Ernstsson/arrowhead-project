@@ -15,10 +15,10 @@
     2. `https://169.254.5.254:8445/swagger-ui.html#/Management`
    ```json
    {    
-      "consumerId": [lights-system-id],
+      "consumerId": ["lights-system-id"],
       "interfaceIds": [1],
-      "providerIds": [door-camera-id],
-      "serviceDefinitionIds": [door-camera-dummy-id]
+      "providerIds": ["door-camera-id"],
+      "serviceDefinitionIds": ["door-camera-dummy-id"]
     }
    ```
 
