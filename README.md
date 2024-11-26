@@ -8,7 +8,7 @@
     ```json
     {
       "address": "127.0.0.1",
-      "port": 8889,
+      "port": 8881,
       "systemName": "lights"
    }
    ```
