@@ -5,10 +5,12 @@
     <file url="file://$PROJECT_DIR$/application-skeleton-provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/application-skeleton-publisher/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/application-skeleton-subscriber/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/car-battery-charger/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-car-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-car-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-car-provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/door-camera/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/electricity-price-monitor/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lights/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/radiator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

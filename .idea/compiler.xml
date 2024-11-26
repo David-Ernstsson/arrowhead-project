@@ -6,16 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="electricity-price-monitor" />
         <module name="door-camera" />
         <module name="radiator" />
-        <module name="application-skeleton-provider" />
-        <module name="application-skeleton-consumer" />
-        <module name="arrowhead-application-skeleton-publisher" />
+        <module name="car-battery-charger" />
         <module name="lights" />
-        <module name="application-skeleton-subscriber" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="application-skeleton-consumer" target="11" />
+      <module name="application-skeleton-provider" target="11" />
+      <module name="application-skeleton-subscriber" target="11" />
+      <module name="arrowhead-application-skeleton-publisher" target="11" />
       <module name="demo-car-common" target="11" />
       <module name="demo-car-consumer" target="9" />
       <module name="demo-car-provider" target="11" />
@@ -28,10 +30,12 @@
       <module name="application-skeleton-subscriber" options="-parameters" />
       <module name="arrowhead-application-skeleton-provider" options="-parameters" />
       <module name="arrowhead-application-skeleton-publisher" options="-parameters" />
+      <module name="car-battery-charger" options="-parameters" />
       <module name="demo-car-common" options="-parameters" />
       <module name="demo-car-consumer" options="-parameters" />
       <module name="demo-car-provider" options="-parameters" />
       <module name="door-camera" options="-parameters" />
+      <module name="electricity-price-monitor" options="-parameters" />
       <module name="lights" options="-parameters" />
       <module name="radiator" options="-parameters" />
       <module name="smarthome" options="-parameters" />

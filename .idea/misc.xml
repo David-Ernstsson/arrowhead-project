@@ -12,6 +12,10 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/application-skeleton-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/application-skeleton-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/application-skeleton-publisher/pom.xml" />
+        <option value="$PROJECT_DIR$/application-skeleton-subscriber/pom.xml" />
         <option value="$PROJECT_DIR$/demo-car-common/pom.xml" />
         <option value="$PROJECT_DIR$/demo-car-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/demo-car-provider/pom.xml" />

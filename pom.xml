@@ -15,12 +15,10 @@
 
     <modules>
         <module>door-camera</module>
+        <module>car-battery-charger</module>
+        <module>electricity-price-monitor</module>
         <module>lights</module>
         <module>radiator</module>
-        <module>application-skeleton-provider</module>
-        <module>application-skeleton-publisher</module>
-        <module>application-skeleton-consumer</module>
-        <module>application-skeleton-subscriber</module>
     </modules>
     <build>
         <plugins>
