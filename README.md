@@ -4,13 +4,22 @@
 1. Start local cloud with core systems as well as eventhandler at ip `169.254.5.254`
 2. Start publishing systems: door-camera
 3. Register consuming systems: lights
-    - `https://169.254.5.254:8443/swagger-ui.html#/Management/addSystemUsingPOST`
+    1. `https://169.254.5.254:8443/swagger-ui.html#/Management/addSystemUsingPOST`
     ```json
     {
       "address": "127.0.0.1",
-     "port": 8889,
-     "systemName": "lights"
+      "port": 8889,
+      "systemName": "lights"
    }
+   ```
+    2. `https://169.254.5.254:8445/swagger-ui.html#/Management`
+   ```json
+   {    
+      "consumerId": [lights-system-id],
+      "interfaceIds": [1],
+      "providerIds": [door-camera-id],
+      "serviceDefinitionIds": [door-camera-dummy-id]
+    }
    ```
 
 ## Purpose & project description
