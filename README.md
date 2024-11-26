@@ -4,14 +4,14 @@
 1. Start local cloud with core systems as well as eventhandler at ip `169.254.5.254`
 2. Start publishing systems: door-camera
 3. Register consuming systems: lights
-```http
-https://169.254.5.254:8443/swagger-ui.html#/Management/addSystemUsingPOST
-{
-  "address": "127.0.0.1",
-  "port": 8889,
-  "systemName": "lights"
-}
-```
+    - `https://169.254.5.254:8443/swagger-ui.html#/Management/addSystemUsingPOST`
+    ```json
+    {
+      "address": "127.0.0.1",
+     "port": 8889,
+     "systemName": "lights"
+   }
+   ```
 
 ## Purpose & project description
 The purpose of this project is to demonstrate a smart energy-efficient home using the Arrowhead Framework in a local cloud. The system of systems (SoS) aims to both minimize energy usage and costs as well as making life more convenience for the homeowner. The PoC demonstrates this by automating home appliances and services based on predefined events such as when the owner leaves or enters the home. The SoS uses event-driven architecture to control heating, lighting and electric car charging based on the homeowner's presence and electricity prices.
