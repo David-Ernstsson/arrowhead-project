@@ -3,7 +3,7 @@
 	
 	<parent>
     	<groupId>eu.arrowhead</groupId>	
-		<artifactId>demo-car</artifactId>
+		<artifactId>smart-home</artifactId>
 		<version>4.4.0.2</version>
   	</parent>
 	

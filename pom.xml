@@ -9,13 +9,11 @@
         <version>4.4.0.2</version>
     </parent>
 
-    <artifactId>demo-car</artifactId>
+    <artifactId>smart-home</artifactId>
     <packaging>pom</packaging>
+    <version>4.4.0.2</version>
 
     <modules>
-        <module>demo-car-common</module>
-        <module>demo-car-consumer</module>
-        <module>demo-car-provider</module>
         <module>application-skeleton-provider</module>
         <module>application-skeleton-publisher</module>
         <module>application-skeleton-consumer</module>

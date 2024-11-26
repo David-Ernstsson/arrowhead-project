@@ -2,8 +2,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<parent>
-    	<groupId>eu.arrowhead</groupId>	
-		<artifactId>demo-car</artifactId>
+    	<groupId>eu.arrowhead</groupId>
+		<artifactId>smart-home</artifactId>
 		<version>4.4.0.2</version>
   	</parent>
 	
