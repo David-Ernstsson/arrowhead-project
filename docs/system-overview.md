@@ -59,3 +59,6 @@ graph TB
 |                         |           |                                  | `ELECTRICITY_PRICE_HIGH`  | Send when price is high                                |
 | **radiator**            | Consumer  | `RadiatorController`            | `HOMEOWNER_LEFT`          | Turn off radiator                         |
 |                         |           |                                  | `HOMEOWNER_CAME_HOME`     | Turn on radiator                          |
+
+## System in action
+![smarthome](/smarthome%20sos%20screenshot.png)
