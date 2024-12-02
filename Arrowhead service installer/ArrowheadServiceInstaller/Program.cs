@@ -1,13 +1,6 @@
-﻿using System;
-using System.Net.Http;
-using System.Security.Cryptography.X509Certificates;
-using System.Net.Security;
-using System.Threading.Tasks;
-using ArrowheadServiceInstaller;
+﻿using ArrowheadServiceInstaller;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
-Console.WriteLine("Building services...");
 
 var services = BuildServiceProvider();
 
@@ -16,13 +9,13 @@ try
 
     var serviceRegistryClient = services.GetRequiredService<ServiceRegistryClient>();
 
-    Console.WriteLine("\n--- Echoing service registry...");
+    Console.WriteLine("\n--- Echoing service registry ----");
     var response = await serviceRegistryClient.Echo();
     Console.WriteLine($"Response Status: {response.StatusCode}");
 
-    Console.WriteLine("\n--- Adding consumer systems and authorizations...");
+    Console.WriteLine("\n--- Adding consumer systems and authorizations ----");
     await serviceRegistryClient.AddConsumerSystems();
-    Console.WriteLine("Finished adding consumer systems...");
+    Console.WriteLine("\n--- Finished adding consumer systems ----");
 
 }
 catch (Exception ex)

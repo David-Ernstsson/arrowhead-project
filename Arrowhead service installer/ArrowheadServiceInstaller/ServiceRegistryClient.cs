@@ -25,6 +25,8 @@ public class ServiceRegistryClient
         var consumerSystemsToAdd = ConsumerSystem.ConsumerSystemsToAdd;
         foreach (var createSystemDto in consumerSystemsToAdd)
         {
+            Console.WriteLine($"\nAdding system: {createSystemDto}");
+
             await AddSystem(createSystemDto.ServiceDefinitionAuthorization, createSystemDto.CreateSystemDto);
         }
     }
@@ -51,8 +53,6 @@ public class ServiceRegistryClient
 
     private async Task AddSystem(string serviceDefinitionName, CreateSystemDto systemDto)
     {
-        Console.WriteLine($"Adding system: {systemDto}");
-
         var serviceData = await GetServiceData(serviceDefinitionName);
 
         var message = await _httpClient.PostAsJsonAsync("serviceregistry/mgmt/systems", systemDto);
