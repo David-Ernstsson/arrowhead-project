@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ConsoleApp1;
+namespace ArrowheadServiceInstaller;
 
 public static class IHttpClientBuilderExtensions
 {

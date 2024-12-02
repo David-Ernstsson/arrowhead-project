@@ -3,9 +3,11 @@ using System.Net.Http;
 using System.Security.Cryptography.X509Certificates;
 using System.Net.Security;
 using System.Threading.Tasks;
-using ConsoleApp1;
+using ArrowheadServiceInstaller;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
+Console.WriteLine("Building services...");
 
 var services = BuildServiceProvider();
 
@@ -14,8 +16,12 @@ try
 
     var serviceRegistryClient = services.GetRequiredService<ServiceRegistryClient>();
 
+    Console.WriteLine("Echo core systems...");
     var response = await serviceRegistryClient.Echo();
     var responseBody = await response.Content.ReadAsStringAsync();
+
+    Console.WriteLine("Add consumer systems...");
+    await serviceRegistryClient.AddConsumerSystems();
 
     Console.WriteLine($"Response Status: {response.StatusCode}");
     Console.WriteLine($"Response Body: {responseBody}");
