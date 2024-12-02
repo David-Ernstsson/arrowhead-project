@@ -5,6 +5,7 @@ The purpose of this project is to demonstrate a smart energy-efficient home usin
 ## Documentation
 - [System overview](docs/system-overview.md)
 - [Getting started](docs/getting-started.md)
+- [Arrowhead service installer (.net)](/Arrowhead%20service%20installer)
 - [More docs](docs/)
 
 ## Implementation notes
