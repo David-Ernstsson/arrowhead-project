@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace ArrowheadServiceInstaller;
+namespace ArrowheadServiceInstaller.Dtos;
 
 public class CreateSystemDto
 {

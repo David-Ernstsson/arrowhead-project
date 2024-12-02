@@ -16,13 +16,13 @@ try
 
     var serviceRegistryClient = services.GetRequiredService<ServiceRegistryClient>();
 
-    Console.WriteLine("\nEchoing service registry...");
+    Console.WriteLine("\n--- Echoing service registry...");
     var response = await serviceRegistryClient.Echo();
     Console.WriteLine($"Response Status: {response.StatusCode}");
 
-    Console.WriteLine("\nAdding consumer systems...");
+    Console.WriteLine("\n--- Adding consumer systems and authorizations...");
     await serviceRegistryClient.AddConsumerSystems();
-
+    Console.WriteLine("Finished adding consumer systems...");
 
 }
 catch (Exception ex)
@@ -30,7 +30,7 @@ catch (Exception ex)
     Console.WriteLine($"Error: {ex.Message}");
 }
 
-Console.WriteLine("Press any key to exit...");
+Console.WriteLine("\n--- All finished and good to go. Press any key to exit...");
 Console.ReadKey();
 
 ServiceProvider BuildServiceProvider()
@@ -43,6 +43,11 @@ ServiceProvider BuildServiceProvider()
     serviceCollection.AddHttpClient<ServiceRegistryClient>(client =>
     {
         client.BaseAddress = new Uri(configuration["BaseUrls:ServiceRegistry"]);
+    }).BuildForLocalCloud();
+
+    serviceCollection.AddHttpClient<AuthorizationClient>(client =>
+    {
+        client.BaseAddress = new Uri(configuration["BaseUrls:Authorization"]);
     }).BuildForLocalCloud();
 
     return serviceCollection.BuildServiceProvider();

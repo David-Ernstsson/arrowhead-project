@@ -1,4 +1,6 @@
-﻿namespace ArrowheadServiceInstaller;
+﻿using ArrowheadServiceInstaller.Dtos;
+
+namespace ArrowheadServiceInstaller;
 
 public class ConsumerSystem
 {
@@ -25,7 +27,7 @@ public class ConsumerSystem
 
         new ConsumerSystem("door-camera-dummy", new CreateSystemDto
         {
-            Address = "192.168.1.1",
+            Address = "127.0.0.1",
             AuthenticationInfo = _authenticationInfo,
             Port = 8882,
             SystemName = "radiator"
@@ -33,8 +35,8 @@ public class ConsumerSystem
 
         new ConsumerSystem("electricity-price-monitor-dummy",new CreateSystemDto
         {
-            Address = "10.0.0.2",
-            AuthenticationInfo = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnotherExampleKey...QIDAQAB",
+            Address = "127.0.0.1",
+            AuthenticationInfo = _authenticationInfo,
             Port = 8883,
             SystemName = "carbatterycharger"
         })
