@@ -1,0 +1,15 @@
+eu\arrowhead\application\skeleton\publisher\security\PublisherSecurityConfig.class
+eu\arrowhead\application\skeleton\publisher\event\PresetEventType.class
+eu\arrowhead\application\skeleton\publisher\security\PublisherAccessControlFilter.class
+eu\arrowhead\application\skeleton\publisher\configuration\ConfigConstants.class
+eu\arrowhead\application\skeleton\publisher\configuration\ContainerConfiguration.class
+eu\arrowhead\application\skeleton\publisher\configuration\ContainerConfProperties.class
+eu\arrowhead\application\skeleton\publisher\service\PublisherService.class
+io\github\david_ernstsson\smarthome\electricitypricemonitor\ElectricityPriceMonitorApplicationInitListener.class
+eu\arrowhead\application\skeleton\publisher\event\EventTypeConstants.class
+io\github\david_ernstsson\smarthome\electricitypricemonitor\controller\ElectricityPriceMonitorController.class
+eu\arrowhead\application\skeleton\publisher\constants\PublisherConstants.class
+io\github\david_ernstsson\smarthome\electricitypricemonitor\ElectricityPriceMonitorCameraMain.class
+eu\arrowhead\application\skeleton\publisher\security\PublisherTokenSecurityFilter.class
+io\github\david_ernstsson\smarthome\electricitypricemonitor\domain\ElectricityPriceMonitorSimulationTask.class
+io\github\david_ernstsson\smarthome\electricitypricemonitor\ElectricityPriceMonitorConstants.class
