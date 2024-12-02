@@ -34,14 +34,14 @@ public class CarBatteryChargerController {
 	
 	//-------------------------------------------------------------------------------------------------
 	@PostMapping(path = SubscriberConstants.ELECTRICITY_PRICE_LOW)
-	public void receiveEventHomeownerLeft(@RequestBody final EventDTO event) {
+	public void receiveEventElectricityPriceLow(@RequestBody final EventDTO event) {
 		if (event.getEventType() != null) {
 			changeChargingState(false);
 		}
 	}
 
 	@PostMapping(path = SubscriberConstants.ELECTRICITY_PRICE_HIGH)
-	public void receiveEventHomeownerCameHome(@RequestBody final EventDTO event) {
+	public void receiveEventElectricityPriceHigh(@RequestBody final EventDTO event) {
 		if (event.getEventType() != null) {
 			changeChargingState(true);
 		}
