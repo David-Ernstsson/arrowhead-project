@@ -1,7 +1,9 @@
 ## Running the SoS - simplified
 1. Start local cloud with `core systems` as well as `eventhandler` with [start-all.bat](/core%20systems/start-all.bat)
-2. Start publishing systems: `door-camera` and `electricity-price-monitor`
-3. Register consuming systems and intra cloud authorization rules with [ArrowheadServiceInstaller.exe](/Arrowhead%20service%20installer/executable/ArrowheadServiceInstaller.exe)
+2. `mvn install` in root
+3. Start publishing systems: `door-camera` and `electricity-price-monitor`
+4. Register consuming systems and intra cloud authorization rules with [ArrowheadServiceInstaller.exe](/Arrowhead%20service%20installer/executable/ArrowheadServiceInstaller.exe)
+5. Start consuming systems `lights`, `radiator` and `car-battery-charger`
 
 ## Running the SoS - long version
 1. Start local cloud with `core systems` as well as `eventhandler` at ip `169.254.5.254`. Configured systems can all be found in [core systems](/core%20systems/) and started by [start-all.bat](/core%20systems/start-all.bat)
