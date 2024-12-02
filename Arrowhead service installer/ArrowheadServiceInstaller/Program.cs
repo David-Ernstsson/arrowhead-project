@@ -16,15 +16,14 @@ try
 
     var serviceRegistryClient = services.GetRequiredService<ServiceRegistryClient>();
 
-    Console.WriteLine("Echo core systems...");
+    Console.WriteLine("\nEchoing service registry...");
     var response = await serviceRegistryClient.Echo();
-    var responseBody = await response.Content.ReadAsStringAsync();
+    Console.WriteLine($"Response Status: {response.StatusCode}");
 
-    Console.WriteLine("Add consumer systems...");
+    Console.WriteLine("\nAdding consumer systems...");
     await serviceRegistryClient.AddConsumerSystems();
 
-    Console.WriteLine($"Response Status: {response.StatusCode}");
-    Console.WriteLine($"Response Body: {responseBody}");
+
 }
 catch (Exception ex)
 {

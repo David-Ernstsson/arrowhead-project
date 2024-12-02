@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using System.Net.Http.Json;
+using ArrowheadServiceInstaller.Dtos;
 
 namespace ArrowheadServiceInstaller;
 
@@ -19,15 +20,28 @@ public class ServiceRegistryClient
 
     public async Task AddConsumerSystems()
     {
-        var consumerSystemsToAdd = CreateSystemDto.ConsumerSystemsToAdd;
+        var consumerSystemsToAdd = ConsumerSystem.ConsumerSystemsToAdd;
         foreach (var createSystemDto in consumerSystemsToAdd)
         {
-            await AddSystem(createSystemDto);
+            Console.WriteLine("Adding system: " + createSystemDto);
+            await AddSystem(createSystemDto.ServiceDefinitionAuthorization, createSystemDto.CreateSystemDto);
         }
     }
 
-    private async Task AddSystem(CreateSystemDto systemDto)
+    public async Task<ServiceData> GetServiceData(string serviceDefinitionName)
     {
+        var servicesResponse = await _httpClient.GetFromJsonAsync<ServiceDataRoot>("serviceregistry/mgmt");
+        var serviceData = servicesResponse.Data.LastOrDefault(s => s.ServiceDefinition.ServiceDefinitionName == serviceDefinitionName);
+
+        ArgumentNullException.ThrowIfNull(serviceData);
+
+        return serviceData;
+    }
+
+    private async Task AddSystem(string serviceDefinitionName, CreateSystemDto systemDto)
+    {
+        var serviceData = await GetServiceData(serviceDefinitionName);
+
         var message = await _httpClient.PostAsJsonAsync("serviceregistry/mgmt/systems", systemDto);
 
         if (message.StatusCode == HttpStatusCode.BadRequest)

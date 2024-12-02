@@ -1,4 +1,4 @@
-﻿namespace ArrowheadServiceInstaller;
+﻿namespace ArrowheadServiceInstaller.Dtos;
 
 public class ErrorResponse
 {
