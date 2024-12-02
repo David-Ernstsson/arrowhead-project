@@ -61,4 +61,4 @@ graph TB
 |                         |           |                                  | `HOMEOWNER_CAME_HOME`     | Turn on radiator                          |
 
 ## System in action
-![smarthome](/smarthome%20sos%20screenshot.png)
+![smarthome](/docs/smarthome%20sos%20screenshot.png)
