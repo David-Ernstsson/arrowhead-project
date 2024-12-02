@@ -12,10 +12,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class DoorCameraMain {
 
-	//=================================================================================================
-	// methods
-
-	//-------------------------------------------------------------------------------------------------
 	public static void main(final String[] args) {
 		SpringApplication.run(DoorCameraMain.class, args);
 	}

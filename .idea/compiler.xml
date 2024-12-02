@@ -9,8 +9,8 @@
         <module name="electricity-price-monitor" />
         <module name="door-camera" />
         <module name="radiator" />
-        <module name="car-battery-charger" />
         <module name="lights" />
+        <module name="car-battery-charger" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

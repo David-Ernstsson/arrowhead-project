@@ -2,6 +2,8 @@
 <module version="4">
   <component name="AdditionalModuleElements">
     <content url="file://$MODULE_DIR$" dumb="true">
+      <excludeFolder url="file://$MODULE_DIR$/Arrowhead service installer" />
+      <excludeFolder url="file://$MODULE_DIR$/core systems" />
       <excludeFolder url="file://$MODULE_DIR$/doc" />
     </content>
   </component>
