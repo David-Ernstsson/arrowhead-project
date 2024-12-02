@@ -1,5 +1,5 @@
 ## Running the SoS
-1. Start local cloud with `core systems` as well as `eventhandler` at ip `169.254.5.254`. These systems can all be found in [core systems](core%20systems/)
+1. Start local cloud with `core systems` as well as `eventhandler` at ip `169.254.5.254`. These systems can all be found in [core systems](/core%20systems/)
 2. Start publishing systems: `door-camera` and `electricity-price-monitor`
 4. Register and run consuming system `lights` (replace id values accordingly from database/swagger)
     1. `https://169.254.5.254:8443/swagger-ui.html#/Management/addSystemUsingPOST`
