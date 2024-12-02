@@ -5,6 +5,7 @@ The purpose of this project is to demonstrate a smart energy-efficient home usin
 ## Documentation
 - [System overview](docs/system-overview.md)
 - [Getting started](docs/getting-started.md)
+- [More docs](docs/)
 
 ## Implementation notes
 - **Event-based architecture:** The system heavily relies on an event-based architecture and the Arrowhead Framework eventhandler to synchronize operations between devices and services.
