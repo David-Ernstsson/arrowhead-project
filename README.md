@@ -12,7 +12,7 @@ The purpose of this project is to demonstrate a smart energy-efficient home usin
 - **Event-based architecture:** The system heavily relies on an event-based architecture and the Arrowhead Framework eventhandler to synchronize operations between devices and services.
 - **Energy optimization:** By reacting to low electricity prices, the system reduces energy costs while ensuring essential operations like heating and car charging are performed efficiently.
 - **Homeowner convenience:** By leveraging automation rather than manual work the homeowner knows he/she saves costs without having to think or do anything about it.
-- **Publish of events:** Occurs randomly or somewhat randomly with a timer.
+- **Publish of events:** Occurs on a schedule. The homeowner has his work and freetime schedule and the energy prices are always lowest 2-4am.
 
 ## Future enhancements
 - More energy consuming systems such as dishwasher, laundry machine etc.
