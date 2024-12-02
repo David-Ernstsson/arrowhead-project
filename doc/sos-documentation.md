@@ -3,7 +3,7 @@
 ## Graph
 ```mermaid
 graph TB
-    subgraph "Arrowhead Local Cloud - smarthome"
+    subgraph "Arrowhead Local Cloud"
         direction TB
         %% Core Systems
         authorization[Authorization]
@@ -44,6 +44,7 @@ graph TB
     style car-battery-charger fill:#d3d3d3,stroke:#000,stroke-width:2px
     style lights fill:#d3d3d3,stroke:#000,stroke-width:2px
     style radiator fill:#d3d3d3,stroke:#000,stroke-width:2px
+```
 
 ## Table
 | System                  | Type      | Service                         | Event Name                | Action                                    |
