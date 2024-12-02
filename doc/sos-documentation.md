@@ -2,7 +2,7 @@
 
 | System                  | Type      | Service                         | Event Name                | Action                                    |
 |-------------------------|-----------|----------------------------------|---------------------------|-------------------------------------------|
-| **car-battery-charger** | Consumer  | `car-battery-charger-service`   | `ELECTRICITY_PRICE_LOW`   | Charge battery                            |
+| **car-battery-charger** | Consumer  | `car-battery-charger-dummy`   | `ELECTRICITY_PRICE_LOW`   | Charge battery                            |
 |                         |           |                                  | `ELECTRICITY_PRICE_HIGH`  | Stop charging action                                 |
 | **door-camera**         | Provider  | `door-camera-dummy`             | `HOMEOWNER_LEFT`          | Send event                                |
 |                         |           |                                  | `HOMEOWNER_CAME_HOME`     | Send event                                |
