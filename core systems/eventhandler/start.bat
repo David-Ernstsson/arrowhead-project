@@ -1,0 +1,1 @@
+START "eventhandler" java -jar arrowhead-eventhandler-testcloud2-aitia-4.6.2.jar       -Xms128M -Xmx256M       -Dlog4j.configurationFile=C:\Git\Ernstsson\D7042E, IoT-based industrial automation and digitalization\clouds\cloudlek_2\arrowhead-4.6.2\testcloud2.aitia\arrowhead-4.6.2\testcloud2.aitia\eventhandler\log4j2.xml

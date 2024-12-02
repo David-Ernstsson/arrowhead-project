@@ -1,0 +1,1 @@
+START "orchestrator" java -jar arrowhead-orchestrator-testcloud2-aitia-4.6.2.jar       -Xms128M -Xmx256M       -Dlog4j.configurationFile=C:\Git\Ernstsson\D7042E, IoT-based industrial automation and digitalization\clouds\cloudlek_2\arrowhead-4.6.2\testcloud2.aitia\orchestrator\log4j2.xml
