@@ -1,18 +1,6 @@
 # System of System documentation
 
-| System                  | Type      | Service                         | Event Name                | Action                                    |
-|-------------------------|-----------|----------------------------------|---------------------------|-------------------------------------------|
-| **car-battery-charger** | Consumer  | `car-battery-charger-dummy`   | `ELECTRICITY_PRICE_LOW`   | Charge battery                            |
-|                         |           |                                  | `ELECTRICITY_PRICE_HIGH`  | Stop charging action                                 |
-| **door-camera**         | Provider  | `door-camera-dummy`             | `HOMEOWNER_LEFT`          | Sent when homeowner leaves                                |
-|                         |           |                                  | `HOMEOWNER_CAME_HOME`     | Sent when homeowner comes home                                |
-| **lights**              | Consumer  | `LightsController`              | `HOMEOWNER_LEFT`          | Turn off lights                           |
-|                         |           |                                  | `HOMEOWNER_CAME_HOME`     | Turn on lights                            |
-| **electricity-price-monitor** | Provider | `electricity-price-monitor-dummy` | `ELECTRICITY_PRICE_LOW`   | Sent when price is low                                |
-|                         |           |                                  | `ELECTRICITY_PRICE_HIGH`  | Send when price is high                                |
-| **radiator**            | Consumer  | `RadiatorController`            | `HOMEOWNER_LEFT`          | Turn off radiator                         |
-|                         |           |                                  | `HOMEOWNER_CAME_HOME`     | Turn on radiator                          |
-
+## Graph
 ```mermaid
 graph TB
     subgraph "Arrowhead Local Cloud - smarthome"
@@ -57,3 +45,16 @@ graph TB
     style lights fill:#d3d3d3,stroke:#000,stroke-width:2px
     style radiator fill:#d3d3d3,stroke:#000,stroke-width:2px
 
+## Table
+| System                  | Type      | Service                         | Event Name                | Action                                    |
+|-------------------------|-----------|----------------------------------|---------------------------|-------------------------------------------|
+| **car-battery-charger** | Consumer  | `car-battery-charger-dummy`   | `ELECTRICITY_PRICE_LOW`   | Charge battery                            |
+|                         |           |                                  | `ELECTRICITY_PRICE_HIGH`  | Stop charging action                                 |
+| **door-camera**         | Provider  | `door-camera-dummy`             | `HOMEOWNER_LEFT`          | Sent when homeowner leaves                                |
+|                         |           |                                  | `HOMEOWNER_CAME_HOME`     | Sent when homeowner comes home                                |
+| **lights**              | Consumer  | `LightsController`              | `HOMEOWNER_LEFT`          | Turn off lights                           |
+|                         |           |                                  | `HOMEOWNER_CAME_HOME`     | Turn on lights                            |
+| **electricity-price-monitor** | Provider | `electricity-price-monitor-dummy` | `ELECTRICITY_PRICE_LOW`   | Sent when price is low                                |
+|                         |           |                                  | `ELECTRICITY_PRICE_HIGH`  | Send when price is high                                |
+| **radiator**            | Consumer  | `RadiatorController`            | `HOMEOWNER_LEFT`          | Turn off radiator                         |
+|                         |           |                                  | `HOMEOWNER_CAME_HOME`     | Turn on radiator                          |
