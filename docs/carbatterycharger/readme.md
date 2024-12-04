@@ -26,8 +26,16 @@ The `carbatterycharger` provides no services
 The `carbatterycharger` consumes the following services:
 * [EventHandler](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/eventhandler) - subscribes on events
 * [ElectricityPriceMonitor](/docs/electricitypricemonitor) - to receive specific events
-* [ServiceRegistry](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/serviceregistry) - to find Authorization
+* [ServiceRegistry](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/serviceregistry) - to find `Authorization`
 * [Authorization](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/authorization) - when sslEnabled
+
+<a name="carbatterycharger_usecases" />
+
+## Use cases
+
+The CarBatteryCharger has the following use cases:
+* When receiving event `ELECTRICITY_PRICE_LOW` it charges the car battery
+* When receiving event `ELECTRICITY_PRICE_HIGH` it stops charging the car battery
 
 <a name="carbatterycharger_consumed_events" />
 
@@ -39,19 +47,13 @@ The `carbatterycharger` consumes the following events (no payload required)
 * `START_INIT`
 * `START_RUN`
 
-<a name="carbatterycharger_usecases" />
-
-## Use cases
-
-The CarBatteryCharger has the following use cases:
-* When receiving event `ELECTRICITY_PRICE_LOW` it charges the car battery
-* When receiving event `ELECTRICITY_PRICE_HIGH` it stops charging the car battery
-
-<a name="carbatterycharger_endpoints" />
+<a name="carbatterycharger_produced_events" />
 
 ## Produced events
 
 No produced events
+
+<a name="carbatterycharger_endpoints" />
 
 ## Endpoints
 
