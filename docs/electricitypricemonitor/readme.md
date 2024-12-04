@@ -17,15 +17,14 @@ The `electricitypricemonitor` provides features for a local cloud systems to:
 
 ## Provided services
 
-The `electricitypricemonitor` provides no services
+* `electricity-price-monitor-dummy` - Needed for intra cloud authorization by systems that wants to receive events from service
 
 <a name="electricitypricemonitor_consumed_services" />
 
 ## Consumed services
 
 The `electricitypricemonitor` consumes the following services:
-* [EventHandler](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/eventhandler) - subscribes on events
-* [ElectricityPriceMonitor](/docs/electricitypricemonitor) - to receive specific events
+* [EventHandler](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/eventhandler) - publishes events
 * [ServiceRegistry](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/serviceregistry) - to find Authorization
 * [Authorization](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/authorization) - when sslEnabled
 
@@ -33,25 +32,22 @@ The `electricitypricemonitor` consumes the following services:
 
 ## Consumed events
 
-The `electricitypricemonitor` consumes the following events (no payload required)
-* `ELECTRICITY_PRICE_LOW`
-* `ELECTRICITY_PRICE_HIGH`
-* `START_INIT`
-* `START_RUN`
+No consumed events
 
 <a name="electricitypricemonitor_usecases" />
 
 ## Use cases
 
 The ElectricityPriceMonitor has the following use cases:
-* When receiving event `ELECTRICITY_PRICE_LOW` it charges the car battery
-* When receiving event `ELECTRICITY_PRICE_HIGH` it stops charging the car battery
+* When electricity price is low publishes event `ELECTRICITY_PRICE_LOW`
+* When electricity price is high publishes event `ELECTRICITY_PRICE_HIGH`
 
 <a name="electricitypricemonitor_endpoints" />
 
 ## Produced events
 
-No produced events
+* `ELECTRICITY_PRICE_LOW`
+* `ELECTRICITY_PRICE_HIGH`
 
 ## Endpoints
 
