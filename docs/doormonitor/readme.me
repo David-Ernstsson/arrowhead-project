@@ -1,53 +1,55 @@
-# DoorMonitor
+# DoorCamera
 
 <a name="doormonitor_sdd" />
 
 ## System Design Description Overview
 
-The purpose of `doormonitor` application system is to monitor the electricity price and publish events when it's high or low.
+The purpose of `doorcamera` application system is to monitor when the homeowner leaves or comes home and publish events accordingly
 
-The `doormonitor` provides features for a local cloud systems to:
-* React to events of when the electricity price is high or low
+The `doorcamera` provides features for a local cloud systems to:
+* React to events when the homeowner leaves or comes home
 
-<a name="doormonitor_sysd" />
+<a name="doorcamera_sysd" />
 
 ## System Design Overview
 
-<a name="doormonitor_provided_services" />
+<a name="doorcamera_provided_services" />
 
 ## Provided services
 
-* `door-monitor-dummy` - Needed for intra cloud authorization by systems that wants to receive events from service
+* `door-camera-dummy` - Needed for intra cloud authorization by systems that wants to receive events from service
 
-<a name="doormonitor_consumed_services" />
+<a name="doorcamera_consumed_services" />
 
 ## Consumed services
 
-The `doormonitor` consumes the following services:
+The `doorcamera` consumes the following services:
 * [EventHandler](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/eventhandler) - publishes events
-* [ServiceRegistry](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/serviceregistry) - to find Authorization
+* [ServiceRegistry](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/serviceregistry) - to find `Authorization`
 * [Authorization](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/authorization) - when sslEnabled
 
-<a name="doormonitor_consumed_events" />
+<a name="doorcamera_usecases" />
 
 ## Use cases
 
-The `doormonitor` has the following use cases:
-* When electricity price is low publishes event `ELECTRICITY_PRICE_LOW`
-* When electricity price is high publishes event `ELECTRICITY_PRICE_HIGH`
+The `doorcamera` has the following use cases:
+* When homeowner leaves publishes event `HOMEOWNER_LEFT`
+* When homeowner comes home publishes event `HOMEOWNER_CAME_HOME`
 
-<a name="doormonitor_endpoints" />
+<a name="doorcamera_produced_events" />
 
 ## Produced events
 
-* `ELECTRICITY_PRICE_LOW`
-* `ELECTRICITY_PRICE_HIGH`
+* `HOMEOWNER_LEFT`
+* `HOMEOWNER_CAME_HOME`
+
+<a name="doorcamera_consumed_events" />
 
 ## Consumed events
 
 No consumed events
 
-<a name="doormonitor_usecases" />
+<a name="doorcamera_endpoints" />
 
 ## Endpoints
 
