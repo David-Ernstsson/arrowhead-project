@@ -29,18 +29,18 @@ The `carbatterycharger` consumes the following services:
 * ServiceRegistry and Orchestrator and Authorization (when sslEnabled)
 
 The `carbatterycharger` consumes the following events (no payload required)
-* ELECTRICITY_PRICE_LOW
-* ELECTRICITY_PRICE_HIGH
-* START_INIT
-* START_RUN
+* `ELECTRICITY_PRICE_LOW`
+* `ELECTRICITY_PRICE_HIGH`
+* `START_INIT`
+* `START_RUN`
 
 <a name="carbatterycharger_usecases" />
 
 ## Use cases
 
 The CarBatteryCharger has the following use cases:
-* When receiving event ELECTRICITY_PRICE_LOW it charges the car battery
-* When receiving event ELECTRICITY_PRICE_HIGH it stops charging the car battery
+* When receiving event `ELECTRICITY_PRICE_LOW` it charges the car battery
+* When receiving event `ELECTRICITY_PRICE_HIGH` it stops charging the car battery
 
 <a name="carbatterycharger_endpoints" />
 
