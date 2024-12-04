@@ -3,10 +3,9 @@
 The purpose of this project is to demonstrate a smart energy-efficient home using the Arrowhead Framework in a local cloud. The system of systems (SoS) aims to both minimize energy usage and costs as well as making life more convenience for the homeowner. The PoC demonstrates this by automating home appliances and services based on predefined events such as when the owner leaves or enters the home. The SoS uses event-driven architecture to control heating, lighting and electric car charging based on the homeowner's presence and electricity prices.
 
 ## Documentation
-- [System overview](docs/system-overview.md)
+- [Documentation](docs/)
 - [Getting started](docs/getting-started.md)
 - [Arrowhead service installer (.net)](/Arrowhead%20service%20installer)
-- [More docs](docs/)
 
 ## Implementation notes
 - **Event-based architecture:** The system heavily relies on an event-based architecture and the Arrowhead Framework eventhandler to synchronize operations between devices and services.
