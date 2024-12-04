@@ -38,7 +38,7 @@ No consumed events
 
 ## Use cases
 
-The ElectricityPriceMonitor has the following use cases:
+The `electricitypricemonitor` has the following use cases:
 * When electricity price is low publishes event `ELECTRICITY_PRICE_LOW`
 * When electricity price is high publishes event `ELECTRICITY_PRICE_HIGH`
 
