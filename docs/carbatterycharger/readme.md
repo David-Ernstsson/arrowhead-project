@@ -4,9 +4,9 @@
 
 ## System Design Description Overview
 
-The purpose of TimeManager supporting core system is to provide time and location based services.
+The purpose of CarBatteryCharger supporting core system is to provide time and location based services.
 
-The TimeManager provides features for a local cloud systems to :
+The CarBatteryCharger provides features for a local cloud systems to :
 * Fetch accurate and trusted time and location information,
 
 
@@ -18,7 +18,7 @@ The TimeManager provides features for a local cloud systems to :
 
 ## Provided services
 
-The TimeManager provides the following services:
+The CarBatteryCharger provides the following services:
 * [Echo](#carbatterycharger_endpoints_get_echo)
 * [Time](#carbatterycharger_endpoints_time)
 
