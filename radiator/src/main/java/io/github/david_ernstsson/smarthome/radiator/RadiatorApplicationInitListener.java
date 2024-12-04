@@ -73,9 +73,6 @@ public class RadiatorApplicationInitListener extends ApplicationInitListener {
 		//Checking the availability of necessary core systems
 		checkCoreSystemReachability(CoreSystem.SERVICEREGISTRY);
 
-		checkCoreSystemReachability(CoreSystem.ORCHESTRATOR);
-		arrowheadService.updateCoreServiceURIs(CoreSystem.ORCHESTRATOR);
-
 		if (sslEnabled) {
 
 			if (tokenSecurityFilterEnabled) {

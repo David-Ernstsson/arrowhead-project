@@ -69,12 +69,9 @@ public class CarBatteryChargerApplicationInitListener extends ApplicationInitLis
 	@Override
 	protected void customInit(final ContextRefreshedEvent event) {
 		checkConfiguration();
-		
+
 		//Checking the availability of necessary core systems
 		checkCoreSystemReachability(CoreSystem.SERVICEREGISTRY);
-
-		checkCoreSystemReachability(CoreSystem.ORCHESTRATOR);
-		arrowheadService.updateCoreServiceURIs(CoreSystem.ORCHESTRATOR);
 
 		if (sslEnabled) {
 
