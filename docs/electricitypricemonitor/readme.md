@@ -30,12 +30,6 @@ The `electricitypricemonitor` consumes the following services:
 
 <a name="electricitypricemonitor_consumed_events" />
 
-## Consumed events
-
-No consumed events
-
-<a name="electricitypricemonitor_usecases" />
-
 ## Use cases
 
 The `electricitypricemonitor` has the following use cases:
@@ -48,6 +42,12 @@ The `electricitypricemonitor` has the following use cases:
 
 * `ELECTRICITY_PRICE_LOW`
 * `ELECTRICITY_PRICE_HIGH`
+
+## Consumed events
+
+No consumed events
+
+<a name="electricitypricemonitor_usecases" />
 
 ## Endpoints
 
