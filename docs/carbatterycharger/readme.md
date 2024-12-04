@@ -26,8 +26,8 @@ The `carbatterycharger` provides no services
 The `carbatterycharger` consumes the following services:
 * [EventHandler](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/eventhandler) - subscribes on events
 * [ElectricityPriceMonitor](/docs/electricitypricemonitor) - to receive specific events
-* [ServiceRegistry](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/serviceregistry)
-* [Authorization](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/authorization) (when sslEnabled)
+* [ServiceRegistry](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/serviceregistry) - to find Authorization
+* [Authorization](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/authorization) - when sslEnabled
 
 The `carbatterycharger` consumes the following events (no payload required)
 * `ELECTRICITY_PRICE_LOW`
