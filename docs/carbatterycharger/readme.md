@@ -47,5 +47,3 @@ The CarBatteryCharger has the following use cases:
 ## Endpoints
 
 No endpoints
-
-```
