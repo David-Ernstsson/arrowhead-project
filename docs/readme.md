@@ -62,7 +62,7 @@ graph TB
 |                         |           |                                  | `ELECTRICITY_PRICE_HIGH`  | Send when price is high                                |
 | **[radiator](/docs/radiator)**            | Consumer  | none            | `HOMEOWNER_LEFT`          | Turn off radiator                         |
 |                         |           |                                  | `HOMEOWNER_CAME_HOME`     | Turn on radiator                          |
-| **[EventHandler](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/eventhandler)**            | Support system  |            |           |                          |
+| **[EventHandler](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/eventhandler)**            | Support system  |    n/a        |           |                          |
 | **[ServiceRegistry](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/serviceregistry)**            | Core system  | n/a            |           |                          |
 | **[Authorization](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/authorization)**            | Core system  | n/a            |           |                          |
 
