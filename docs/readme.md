@@ -76,7 +76,7 @@ certificate trust chains. The Arrowhead trust chain consists of three level:
 - Client certificate: my-client.testcloud2.aitia.arrowhead.eu
 - Example: lights.testcloud2.aitia.arrowhead.eu
 
-The systems sets up a filter that is responsible for validating whether the received HTTPS requests
+The systems sets up a filter that is responsible for validating whether the received HTTPS requests and/or events
 are coming from one of the local cloud’s clients based on its certificate.
 
 ## Figure 2. Screenshot of system running
