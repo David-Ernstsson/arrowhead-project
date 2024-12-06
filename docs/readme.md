@@ -79,5 +79,5 @@ certificate trust chains. The Arrowhead trust chain consists of three level:
 The systems sets up a filter that is responsible for validating whether the received HTTPS requests
 are coming from one of the local cloud’s clients based on its certificate.
 
-## Screenshot of system running
+## Figure 2. Screenshot of system running
 ![smarthome](/docs/smarthome%20sos%20screenshot.png)
