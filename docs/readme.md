@@ -24,6 +24,20 @@ graph TB
         radiator[radiator]
     end
 
+    %% Dependencies
+    electricity-price-monitor --> authorization
+    electricity-price-monitor --> service-registry
+    door-camera --> authorization
+    door-camera --> service-registry
+    car-battery-charger --> authorization
+    car-battery-charger --> service-registry
+    lights --> authorization
+    lights --> service-registry
+    radiator --> authorization
+    radiator --> service-registry
+    radiator --> orchestration
+    radiator -->|/state| door-camera
+
     %% Event Routing to Event Handler
     electricity-price-monitor -->|ELECTRICITY_PRICE_LOW| event-handler
     electricity-price-monitor -->|ELECTRICITY_PRICE_HIGH| event-handler
@@ -58,6 +72,7 @@ graph TB
 |                         |           |                                  | `ELECTRICITY_PRICE_HIGH`  | Stop charging action                                 |
 | **[doorcamera](/docs/doorcamera)**         | Provider  | `door-camera-dummy`             | `HOMEOWNER_LEFT`          | Sent when homeowner leaves                                |
 |                         |           |                                  | `HOMEOWNER_CAME_HOME`     | Sent when homeowner comes home                                |
+|                         |           | [get-state](/docs/doorcamera/readme.md#get-state)             |          | Returns current state of homeowner                                |
 | **[lights](/docs/lights)**              | Consumer  | none              | `HOMEOWNER_LEFT`          | Turn off lights                           |
 |                         |           |                                  | `HOMEOWNER_CAME_HOME`     | Turn on lights                            |
 | **[electricitypricemonitor](/docs/electricitypricemonitor)** | Provider | `electricity-price-monitor-dummy` | `ELECTRICITY_PRICE_LOW`   | Sent when price is low                                |

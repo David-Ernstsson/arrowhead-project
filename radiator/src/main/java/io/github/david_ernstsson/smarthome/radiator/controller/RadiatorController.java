@@ -2,6 +2,7 @@ package io.github.david_ernstsson.smarthome.radiator.controller;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +16,7 @@ import eu.arrowhead.common.dto.shared.EventDTO;
 
 @RestController
 @RequestMapping(SubscriberDefaults.DEFAULT_EVENT_NOTIFICATION_BASE_URI)
+@Service
 public class RadiatorController {
 	
 	//=================================================================================================
@@ -51,9 +53,9 @@ public class RadiatorController {
 		}
 	}
 
-	private void changeRadiatorState(boolean isTurnedOn) {
+	public void changeRadiatorState(boolean isTurnedOn) {
 		radiatorTurnedOn = isTurnedOn;
-		if(isTurnedOn) {
+		if(radiatorTurnedOn) {
 			logger.info("Radiator turned on");
 		}
 		else {

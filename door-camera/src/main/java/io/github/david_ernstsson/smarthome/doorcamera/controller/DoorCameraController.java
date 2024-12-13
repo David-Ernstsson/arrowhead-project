@@ -2,6 +2,9 @@ package io.github.david_ernstsson.smarthome.doorcamera.controller;
 
 import java.util.Map;
 
+import io.github.david_ernstsson.smarthome.doorcamera.DoorCameraConstants;
+import io.github.david_ernstsson.smarthome.doorcamera.DoorCameraStateResponseDto;
+import io.github.david_ernstsson.smarthome.doorcamera.domain.HomeOwnerSimulationTask;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +27,10 @@ public class DoorCameraController {
 	
 	@Autowired
 	private PublisherService publisherService;
-	
+
+	@Autowired
+	private HomeOwnerSimulationTask homeOwnerSimulationTask;
+
 	//=================================================================================================
 	// methods
 
@@ -37,7 +43,15 @@ public class DoorCameraController {
 		
 		return "Got it!";
 	}
-	
+
+	@GetMapping(path = DoorCameraConstants.GET_STATE_URI)
+	public DoorCameraStateResponseDto getStateService() {
+		logger.debug("get-state started...");
+
+		return new DoorCameraStateResponseDto(homeOwnerSimulationTask.isAtHome);
+	}
+
+
 	//-------------------------------------------------------------------------------------------------
 	//TODO: implement here your provider related REST end points
 }

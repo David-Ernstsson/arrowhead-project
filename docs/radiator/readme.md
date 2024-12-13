@@ -25,7 +25,7 @@ The `radiator` provides no services
 
 The `radiator` consumes the following services:
 * [EventHandler](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/eventhandler) - subscribes on events
-* [DoorCamera](/docs/doorcamera) - to receive specific events
+* [DoorCamera](/docs/doorcamera) - to sync state on startup and then receive specific events
 * [ServiceRegistry](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/serviceregistry) - to find `Authorization`
 * [Authorization](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/authorization) - when sslEnabled
 
@@ -34,6 +34,7 @@ The `radiator` consumes the following services:
 ## Use cases
 
 The Radiator has the following use cases:
+* On startup syncs state with endpoint [DoorCamera-State](/docs/doorcamera#state) and turns radiator on/off accordingly
 * When receiving event `HOMEOWNER_LEFT` it turns off the radiator
 * When receiving event `HOMEOWNER_CAME_HOME` it turns on the radiator
 
