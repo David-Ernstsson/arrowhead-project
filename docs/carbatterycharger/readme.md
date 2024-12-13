@@ -60,4 +60,4 @@ No produced events
 No endpoints
 
 ## Security
-See [SoSD - Security](https://github.com/arrowhead-f/core-java-spring/blob/aitia-docs/authorization](https://github.com/David-Ernstsson/arrowhead-project/tree/main/docs#security))
+See [SoSD - Security](https://github.com/David-Ernstsson/arrowhead-project/tree/main/docs#security)
