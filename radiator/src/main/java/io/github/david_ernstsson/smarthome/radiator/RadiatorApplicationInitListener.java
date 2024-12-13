@@ -12,10 +12,13 @@ import java.util.Map;
 
 import eu.arrowhead.application.skeleton.subscriber.ConfigEventProperites;
 import eu.arrowhead.application.skeleton.subscriber.SubscriberUtilities;
+import eu.arrowhead.application.skeleton.subscriber.constants.SubscriberConstants;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
@@ -42,6 +45,9 @@ public class RadiatorApplicationInitListener extends ApplicationInitListener {
 	@Autowired
 	private SubscriberSecurityConfig subscriberSecurityConfig;
 
+	@Autowired
+	private ApplicationContext applicationContext;
+
 	@Value(ApplicationCommonConstants.$TOKEN_SECURITY_FILTER_ENABLED_WD)
 	private boolean tokenSecurityFilterEnabled;
 
@@ -62,6 +68,11 @@ public class RadiatorApplicationInitListener extends ApplicationInitListener {
 	@Autowired
 	private ConfigEventProperites configEventProperites;
 
+	@Bean( SubscriberConstants.CONSUMER_TASK )
+	public RadiatorTask getConsumerTask() {
+		return new RadiatorTask();
+	}
+
 	//=================================================================================================
 	// methods
 
@@ -72,6 +83,9 @@ public class RadiatorApplicationInitListener extends ApplicationInitListener {
 		
 		//Checking the availability of necessary core systems
 		checkCoreSystemReachability(CoreSystem.SERVICEREGISTRY);
+
+		checkCoreSystemReachability(CoreSystem.ORCHESTRATOR);
+		arrowheadService.updateCoreServiceURIs(CoreSystem.ORCHESTRATOR);
 
 		if (sslEnabled) {
 
@@ -95,6 +109,9 @@ public class RadiatorApplicationInitListener extends ApplicationInitListener {
 			arrowheadService.updateCoreServiceURIs(CoreSystem.EVENTHANDLER);
 			subscribeToPresetEvents();
 		}
+
+		final RadiatorTask consumerTask = applicationContext.getBean(SubscriberConstants.CONSUMER_TASK, RadiatorTask.class);
+		consumerTask.start();
 
 		//TODO: implement here any custom behavior on application start up
 	}

@@ -7,12 +7,15 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 import java.util.Objects;
 
 @Component
+@Service
+
 public class HomeOwnerSimulationTask {
     @Autowired
     private PublisherService publisherService;
@@ -21,7 +24,7 @@ public class HomeOwnerSimulationTask {
 
     private static final int SIMULATION_SPEED = 60; // 1 real minute = 1 simulated week
     private static final int SECONDS_IN_A_WEEK = 7 * 24 * 60 * 60;
-    private boolean isAtHome=true;
+    public boolean isAtHome=true;
     private final long simulationStartTime = System.currentTimeMillis();
     private static final String CAME_HOME ="Came home";
 

@@ -9,6 +9,7 @@ import java.security.PublicKey;
 import java.security.cert.CertificateException;
 import java.time.ZonedDateTime;
 import java.util.Base64;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +20,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
 
 import ai.aitia.arrowhead.application.library.ArrowheadService;
@@ -88,8 +90,12 @@ public class DoorCameraApplicationInitListener extends ApplicationInitListener {
 
 		//TODO: Register system by first registering service and then unregister into ServiceRegistry. One seems to first having to needs to create a system to be able to publish event, but how else to do this using arrowheadService?
 		//TODO: Dummy service is needed for system to be created. Its also needed for the consumer to get (some kind of service-registry permission dependency for events magic check?) to get events
-		final ServiceRegistryRequestDTO serviceRegistryRequest = createDummyServiceRegistryRequest();
+		final ServiceRegistryRequestDTO serviceRegistryRequest = createServiceRegistryRequest("door-camera-dummy", "/dummy", HttpMethod.GET);
 		arrowheadService.forceRegisterServiceToServiceRegistry(serviceRegistryRequest);
+
+		final ServiceRegistryRequestDTO getStateRegistryRequest = createServiceRegistryRequest(DoorCameraConstants.GET_STATE_SERVICE_DEFINITION, DoorCameraConstants.GET_STATE_URI, HttpMethod.GET);
+		arrowheadService.forceRegisterServiceToServiceRegistry(getStateRegistryRequest);
+
 		//arrowheadService.unregisterServiceFromServiceRegistry(dummy, dummy);
 
 		if (arrowheadService.echoCoreSystem(CoreSystem.EVENTHANDLER)) {
@@ -101,9 +107,9 @@ public class DoorCameraApplicationInitListener extends ApplicationInitListener {
 		//TODO: implement here any custom behavior on application start up
 	}
 
-	private ServiceRegistryRequestDTO createDummyServiceRegistryRequest() {
+	private ServiceRegistryRequestDTO createServiceRegistryRequest(final String serviceDefinition, final String serviceUri, final HttpMethod httpMethod) {
 		final ServiceRegistryRequestDTO serviceRegistryRequest = new ServiceRegistryRequestDTO();
-		serviceRegistryRequest.setServiceDefinition("door-camera-dummy");
+		serviceRegistryRequest.setServiceDefinition(serviceDefinition);
 		final SystemRequestDTO systemRequest = new SystemRequestDTO();
 		systemRequest.setSystemName(mySystemName);
 		systemRequest.setAddress(mySystemAddress);
@@ -122,7 +128,10 @@ public class DoorCameraApplicationInitListener extends ApplicationInitListener {
 			serviceRegistryRequest.setInterfaces(List.of(DoorCameraConstants.INTERFACE_INSECURE));
 		}
 		serviceRegistryRequest.setProviderSystem(systemRequest);
-		serviceRegistryRequest.setServiceUri("/dummy");
+		serviceRegistryRequest.setServiceUri(serviceUri);
+		serviceRegistryRequest.setMetadata(new HashMap<>());
+		serviceRegistryRequest.getMetadata().put(DoorCameraConstants.HTTP_METHOD, httpMethod.name());
+
 		return serviceRegistryRequest;
 	}
 

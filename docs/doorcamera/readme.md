@@ -53,7 +53,38 @@ No consumed events
 
 ## Endpoints
 
-No endpoints
+The doorcamera controller offers endpoint for getting current state
+
+The base URL for the requests: `https://<host>:<port>`
+
+### Client endpoint description<br />
+<a name="onboardingcontroller_endpoints" />
+
+| Function | URL subpath | Method | Input | Output |
+| -------- | ----------- | ------ | ----- | ------ |
+| [get-state](#endoints_state) | /state   | GET   | [Request](#endpoints_state_request) | [Response](#endpoints_state_response) |
+
+
+<a name="endoints_state" />
+
+### get-state
+path: `/state`
+
+<a name="endpoints_state_request" />
+
+#### Request
+Empty
+
+<a name="endpoints_state_response" />
+
+#### Response
+`doorCameraStateResponseDto`
+
+```json
+{
+    "homeownerIsHome": "boolean"
+}
+```
 
 ## Security
 See [SoSD - Security](https://github.com/David-Ernstsson/arrowhead-project/tree/main/docs#security)

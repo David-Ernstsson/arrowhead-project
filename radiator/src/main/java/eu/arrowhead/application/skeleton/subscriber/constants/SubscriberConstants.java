@@ -11,7 +11,9 @@ public class SubscriberConstants {
 	public static final String HOMEOWNER_CAME_HOME_NOTIFICATION_URI = "/" + "homeownercamehome";
 	public static final String PRESET_EVENT_TYPES = "preset_events";
 	public static final String $PRESET_EVENT_TYPES_WD = "${" + PRESET_EVENT_TYPES + ":" + SubscriberDefaults.DEFAULT_PRESET_EVENT_TYPES + "}";
-	
+
+	public static final String CONSUMER_TASK = "consumertask";
+
 	//=================================================================================================
 	// assistant methods
 
