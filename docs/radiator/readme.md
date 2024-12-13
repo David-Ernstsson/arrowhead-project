@@ -6,7 +6,7 @@
 
 The purpose of `radiator` application system is to turn the radiator on and off in a home.
 
-The `radiator` provides features for a local cloud systems to :
+The `radiator` provides features for a local cloud systems to:
 * Turn the radiator on and off in a home when the homeowner leaves or comes home accordingly
 
 <a name="radiator_sysd" />
