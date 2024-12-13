@@ -9,6 +9,7 @@ eu\arrowhead\application\skeleton\publisher\service\PublisherService.class
 eu\arrowhead\application\skeleton\publisher\event\EventTypeConstants.class
 io\github\david_ernstsson\smarthome\doorcamera\DoorCameraConstants.class
 io\github\david_ernstsson\smarthome\doorcamera\controller\DoorCameraController.class
+io\github\david_ernstsson\smarthome\doorcamera\DoorCameraStateResponseDto.class
 eu\arrowhead\application\skeleton\publisher\constants\PublisherConstants.class
 eu\arrowhead\application\skeleton\publisher\security\PublisherTokenSecurityFilter.class
 io\github\david_ernstsson\smarthome\doorcamera\DoorCameraMain.class

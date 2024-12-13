@@ -3,10 +3,13 @@ eu\arrowhead\application\skeleton\subscriber\security\SubscriberAccessControlFil
 io\github\david_ernstsson\smarthome\radiator\RadiatorMain.class
 eu\arrowhead\application\skeleton\subscriber\constants\SubscriberDefaults.class
 eu\arrowhead\application\skeleton\subscriber\security\SubscriberNotificationAccessControlFilter.class
+io\github\david_ernstsson\smarthome\radiator\RadiatorTask.class
 eu\arrowhead\application\skeleton\subscriber\SubscriberUtilities.class
+io\github\david_ernstsson\smarthome\radiator\DoorCameraStateResponseDto.class
 eu\arrowhead\application\skeleton\subscriber\constants\SubscriberConstants.class
 io\github\david_ernstsson\smarthome\radiator\controller\RadiatorController.class
 eu\arrowhead\application\skeleton\subscriber\security\SubscriberTokenSecurityFilter.class
+io\github\david_ernstsson\smarthome\radiator\DoorCameraConstants.class
 eu\arrowhead\application\skeleton\subscriber\ConfigEventProperites.class
 eu\arrowhead\application\skeleton\subscriber\security\SubscriberSecurityConfig.class
 io\github\david_ernstsson\smarthome\radiator\RadiatorApplicationInitListener.class

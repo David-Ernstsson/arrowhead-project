@@ -4,6 +4,7 @@ C:\Git\Ernstsson\arrowhead-project\door-camera\src\main\java\eu\arrowhead\applic
 C:\Git\Ernstsson\arrowhead-project\door-camera\src\main\java\eu\arrowhead\application\skeleton\publisher\constants\PublisherConstants.java
 C:\Git\Ernstsson\arrowhead-project\door-camera\src\main\java\eu\arrowhead\application\skeleton\publisher\service\PublisherService.java
 C:\Git\Ernstsson\arrowhead-project\door-camera\src\main\java\io\github\david_ernstsson\smarthome\doorcamera\DoorCameraMain.java
+C:\Git\Ernstsson\arrowhead-project\door-camera\src\main\java\io\github\david_ernstsson\smarthome\doorcamera\DoorCameraStateResponseDto.java
 C:\Git\Ernstsson\arrowhead-project\door-camera\src\main\java\eu\arrowhead\application\skeleton\publisher\security\PublisherSecurityConfig.java
 C:\Git\Ernstsson\arrowhead-project\door-camera\src\main\java\eu\arrowhead\application\skeleton\publisher\configuration\ContainerConfProperties.java
 C:\Git\Ernstsson\arrowhead-project\door-camera\src\main\java\io\github\david_ernstsson\smarthome\doorcamera\controller\DoorCameraController.java

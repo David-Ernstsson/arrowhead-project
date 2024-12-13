@@ -33,6 +33,14 @@ public class ConsumerSystem
             SystemName = "radiator"
         }),
 
+        new ConsumerSystem("get-state", new CreateSystemDto
+        {
+            Address = "127.0.0.1",
+            AuthenticationInfo = _authenticationInfo,
+            Port = 8882,
+            SystemName = "radiator"
+        }),
+
         new ConsumerSystem("electricity-price-monitor-dummy",new CreateSystemDto
         {
             Address = "127.0.0.1",
