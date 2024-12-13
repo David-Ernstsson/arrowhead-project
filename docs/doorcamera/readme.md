@@ -55,3 +55,6 @@ No consumed events
 
 No endpoints
 
+## Security
+See [SoSD - Security](https://github.com/David-Ernstsson/arrowhead-project/tree/main/docs#security)
+
