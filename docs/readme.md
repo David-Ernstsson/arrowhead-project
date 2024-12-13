@@ -24,6 +24,18 @@ graph TB
         radiator[radiator]
     end
 
+    %% Dependencies to Authorization and Service Registry
+    electricity-price-monitor --> authorization
+    electricity-price-monitor --> service-registry
+    door-camera --> authorization
+    door-camera --> service-registry
+    car-battery-charger --> authorization
+    car-battery-charger --> service-registry
+    lights --> authorization
+    lights --> service-registry
+    radiator --> authorization
+    radiator --> service-registry
+
     %% Event Routing to Event Handler
     electricity-price-monitor -->|ELECTRICITY_PRICE_LOW| event-handler
     electricity-price-monitor -->|ELECTRICITY_PRICE_HIGH| event-handler
@@ -49,6 +61,7 @@ graph TB
     style car-battery-charger fill:#d3d3d3,stroke:#000,stroke-width:2px
     style lights fill:#d3d3d3,stroke:#000,stroke-width:2px
     style radiator fill:#d3d3d3,stroke:#000,stroke-width:2px
+
 ```
 
 ## Systems
